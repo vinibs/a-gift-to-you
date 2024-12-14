@@ -39,7 +39,13 @@ main {
     align-items: center;
     display: grid;
     justify-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 15rem);
+    width: 100vw;
+    padding-top: 15rem;
+}
+
+title-header, gift-box {
+    width: 100%;
 }
 
 a,

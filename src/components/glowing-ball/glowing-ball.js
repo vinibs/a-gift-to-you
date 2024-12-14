@@ -14,11 +14,9 @@ export class GlowingBall extends LiraElement {
 
     render () {
         return `
-            <div class="glowing-ball">
-                <div class="glow-area">
-                    <div class="flashes"></div>
-                    <div class="glow"></div>
-                </div>
+            <div class="glow-area">
+                <div class="flashes"></div>
+                <div class="glow"></div>
             </div>
         `
     }

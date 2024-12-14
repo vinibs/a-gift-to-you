@@ -19,12 +19,13 @@ class Home extends LiraElement {
     render () {
         return `
             <title-header title-color="${giftData.titleColor}">
-                <h1>Title</h1>
-                <h2 slot="subtitle">Subtitle</h2>
+                <h1>${giftData.title}</h1>
+                <h2 slot="subtitle">${giftData.subtitle}</h2>
             </title-header>
 
             <main>
-                <glowing-ball></glowing-ball>
+                <gift-box box-color="${giftData.boxColor}" ribbon-color="${giftData.ribbonColor}">
+                </gift-box>
             </main>
         `
     }
