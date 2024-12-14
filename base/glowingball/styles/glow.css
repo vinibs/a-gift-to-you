@@ -1,0 +1,33 @@
+.glow-area {
+    align-items: center;
+    display: grid;
+    font-size: 40px;
+    height: 1em;
+    justify-items: center;
+    position: relative;
+    width: 1em;
+    z-index: 0;
+}
+
+.glow {
+    animation: glow 4s linear infinite;
+    background: rgb(255,255,255);
+    border: none;
+    border-radius: .5em;
+    display: block;
+    height: 1em;
+    position: absolute;
+    width: 1em;
+    z-index: 0;
+}
+
+.flashes {
+    animation: rotate-clockwise 120s linear infinite, scale 4s linear infinite;
+    background: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 65%);
+    font-size: 4.5em;
+    height: 1em;
+    clip-path: polygon(43% 100%, 57% 100%, 51% 51%, 90% 80%, 85% 85%, 51% 51%, 100% 57%, 100% 43%, 51% 49%, 90% 20%, 85% 15%, 51% 49%, 57% 0, 43% 0, 49% 49%, 15% 15%, 10% 20%, 49% 49%, 0 43%, 0 57%, 49% 51%, 15% 85%, 10% 80%, 49% 51%);
+    position: absolute;
+    width: 1em;
+    z-index: 1;
+}

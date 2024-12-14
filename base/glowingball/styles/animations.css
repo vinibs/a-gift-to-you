@@ -1,0 +1,91 @@
+@keyframes glow {
+    0% {
+        box-shadow: 
+            0 0 .5em .5em rgb(255,255,255),
+            /* Top-left part */
+            -.3em -.2em 1em .2em rgb(206, 227, 255),
+            -.6em -.4em 1.8em .8em rgb(141, 190, 253),
+            /* Top-right part */
+            .44em -.24em .3em .1em rgb(224, 226, 255),
+            .6em -.4em .7em .2em rgb(179, 203, 255),
+            /* Bottom-left part */
+            -.5em .3em .3em .1em rgb(211, 245, 255),
+            -.6em .4em .5em .3em rgb(159, 228, 255),
+            /* Bottom-right part */
+            .4em .2em .4em .1em rgb(210, 235, 255),
+            .6em .4em 1.4em .4em rgb(134, 200, 255);
+    }
+    30% {
+        box-shadow: 
+            0 0 .5em .5em rgb(255,255,255),
+            /* Top-left part */
+            -.3em -.2em 2.5em .4em rgb(206, 227, 255),
+            -.6em -.4em 3.6em 1em rgb(141, 190, 253),
+            /* Top-right part */
+            .44em -.24em .1em .2em rgb(224, 226, 255),
+            .6em -.4em 1.3em .4em rgb(179, 203, 255),
+            /* Bottom-left part */
+            -.5em .3em 2em .1em rgb(211, 245, 255),
+            -.6em .4em 3.5em .3em rgb(159, 228, 255),
+            /* Bottom-right part */
+            .4em .2em .2em .3em rgb(210, 235, 255),
+            .6em .4em 2em .7em rgb(134, 200, 255);
+    }
+    60% {
+        box-shadow: 
+            0 0 .5em .5em rgb(255,255,255),
+            /* Top-left part */
+            -.3em -.2em .6em .4em rgb(206, 227, 255),
+            -.6em -.4em 1.9em 1em rgb(141, 190, 253),
+            /* Top-right part */
+            2em -.24em 3em .2em rgb(224, 226, 255),
+            3em -.4em 6em .4em rgb(179, 203, 255),
+            /* Bottom-left part */
+            -.5em .3em .3em .1em rgb(211, 245, 255),
+            -.6em .4em .7em .3em rgb(159, 228, 255),
+            /* Bottom-right part */
+            .4em .2em .4em .3em rgb(210, 235, 255),
+            .6em .4em 2.6em .7em rgb(134, 200, 255);
+    }
+    100% {
+        box-shadow: 
+            0 0 .5em .5em rgb(255,255,255),
+            /* Top-left part */
+            -.3em -.2em 1em .2em rgb(206, 227, 255),
+            -.6em -.4em 1.8em .8em rgb(141, 190, 253),
+            /* Top-right part */
+            .44em -.24em .3em .1em rgb(224, 226, 255),
+            .6em -.4em .7em .2em rgb(179, 203, 255),
+            /* Bottom-left part */
+            -.5em .3em .3em .1em rgb(211, 245, 255),
+            -.6em .4em .5em .3em rgb(159, 228, 255),
+            /* Bottom-right part */
+            .4em .2em .4em .1em rgb(210, 235, 255),
+            .6em .4em 1.4em .4em rgb(134, 200, 255);
+    }
+}
+
+@keyframes rotate-clockwise {
+    0% {
+        transform: rotate(0);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale {
+    25% {
+        height: 0.8em;
+        width: 0.8em;
+    }
+    50% {
+        height: 1.1em;
+        width: 1.1em;
+    }
+    75% {
+        height: 0.7em;
+        width: 0.7em;
+    }
+}
