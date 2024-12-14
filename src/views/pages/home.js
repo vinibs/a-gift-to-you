@@ -22,6 +22,10 @@ class Home extends LiraElement {
                 <h1>Title</h1>
                 <h2 slot="subtitle">Subtitle</h2>
             </title-header>
+
+            <main>
+                <glowing-ball></glowing-ball>
+            </main>
         `
     }
 }

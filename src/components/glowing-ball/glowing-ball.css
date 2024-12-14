@@ -1,0 +1,139 @@
+@keyframes glow {
+    0% {
+        box-shadow:
+            0 0 .5em .8em rgb(255,255,255),
+            /* Top-left part */
+            -.3em -.2em 1em .2em rgb(206, 227, 255),
+            -.6em -.4em 1.1em .8em rgb(141, 190, 253),
+            /* Top-right part */
+            .44em -.24em .3em .1em rgb(224, 226, 255),
+            .6em -.4em .7em .2em rgb(179, 203, 255),
+            /* Bottom-left part */
+            -.5em .3em .3em .1em rgb(211, 245, 255),
+            -.6em .4em .5em .3em rgb(159, 228, 255),
+            /* Bottom-right part */
+            .4em .2em .4em .1em rgb(210, 235, 255),
+            .6em .4em .8em .4em rgb(134, 200, 255);
+    }
+    30% {
+        box-shadow:
+            0 0 .5em .8em rgb(255,255,255),
+            /* Top-left part */
+            -.3em -.2em 2.5em .4em rgb(206, 227, 255),
+            -.6em -.4em 1.1em 1em rgb(141, 190, 253),
+            /* Top-right part */
+            .44em -.24em .1em .2em rgb(224, 226, 255),
+            .6em -.4em 1.3em .4em rgb(179, 203, 255),
+            /* Bottom-left part */
+            -.5em .3em 2em .1em rgb(211, 245, 255),
+            -.6em .4em 1.7em .3em rgb(159, 228, 255),
+            /* Bottom-right part */
+            .4em .2em .2em .3em rgb(210, 235, 255),
+            .6em .4em 1.6em .7em rgb(134, 200, 255);
+    }
+    60% {
+        box-shadow:
+            0 0 .5em .8em rgb(255,255,255),
+            /* Top-left part */
+            -.3em -.2em .6em .4em rgb(206, 227, 255),
+            -.6em -.4em 1.4em 1em rgb(141, 190, 253),
+            /* Top-right part */
+            2em -.24em 3em .2em rgb(224, 226, 255),
+            1.5em -.4em 1.2em .4em rgb(179, 203, 255),
+            /* Bottom-left part */
+            -.5em .3em .3em .1em rgb(211, 245, 255),
+            -.6em .4em .7em .3em rgb(159, 228, 255),
+            /* Bottom-right part */
+            .4em .2em .4em .3em rgb(210, 235, 255),
+            .6em .4em 1.2em .7em rgb(134, 200, 255);
+    }
+    100% {
+        box-shadow:
+            0 0 .5em .8em rgb(255,255,255),
+            /* Top-left part */
+            -.3em -.2em 1em .2em rgb(206, 227, 255),
+            -.6em -.4em 1.1em .8em rgb(141, 190, 253),
+            /* Top-right part */
+            .44em -.24em .3em .1em rgb(224, 226, 255),
+            .6em -.4em .7em .2em rgb(179, 203, 255),
+            /* Bottom-left part */
+            -.5em .3em .3em .1em rgb(211, 245, 255),
+            -.6em .4em .5em .3em rgb(159, 228, 255),
+            /* Bottom-right part */
+            .4em .2em .4em .1em rgb(210, 235, 255),
+            .6em .4em .8em .4em rgb(134, 200, 255);
+    }
+}
+
+@keyframes rotate-clockwise {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scale {
+    0% {
+        height: 1.1em;
+        width: 1.1em;
+    }
+    25% {
+        height: 1.4em;
+        width: 1.4em;
+    }
+    50% {
+        height: 1.8em;
+        width: 1.8em;
+    }
+    75% {
+        height: 1.6em;
+        width: 1.6em;
+    }
+    100% {
+        height: 1.1em;
+        width: 1.1em;
+    }
+}
+
+.glow-area {
+    align-items: center;
+    display: grid;
+    font-size: 2rem;
+    height: 2rem;
+    justify-items: center;
+    position: relative;
+    width: 2rem;
+    z-index: 0;
+}
+
+.glow {
+    animation: glow 4s linear infinite;
+    background: rgb(255,255,255);
+    border: none;
+    border-radius: 2rem;
+    display: block;
+    height: 2rem;
+    position: absolute;
+    width: 2rem;
+    z-index: 0;
+}
+
+.flashes {
+    animation: rotate-clockwise 120s linear infinite, scale 4s linear infinite;
+    background: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 65%);
+    font-size: 8rem;
+    height: 3rem;
+    clip-path: polygon(43% 100%, 57% 100%, 51% 51%, 90% 80%, 85% 85%, 51% 51%, 100% 57%, 100% 43%, 51% 49%, 90% 20%, 85% 15%, 51% 49%, 57% 0, 43% 0, 49% 49%, 15% 15%, 10% 20%, 49% 49%, 0 43%, 0 57%, 49% 51%, 15% 85%, 10% 80%, 49% 51%);
+    position: absolute;
+    width: 3rem;
+    z-index: 1;
+}
+
+.glowing-ball {
+    align-items: center;
+    display: grid;
+    justify-items: center;
+    min-height: 10rem;
+}
