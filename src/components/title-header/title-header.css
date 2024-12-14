@@ -9,12 +9,22 @@
     }
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .titles {
     font-family: "Optima nova LT";
-    text-transform: uppercase;
-    z-index: 1;
+    left: 0;
+    width: 100%;
+    max-width: 100vw;
+    padding: 1rem;
     position: absolute;
-    width: 100vw;
+    text-transform: uppercase;
+    top: 0;
+    z-index: 1;
 }
 
 .title, .subtitle {
@@ -24,13 +34,23 @@
 }
 
 .title {
-    animation-delay: 1s;
+    animation-delay: .5s;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
 .subtitle {
-    animation-delay: 2s;
+    animation-delay: 1.5s;
     color: rgb(109,109,109);
     font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
 }

@@ -26,8 +26,8 @@ export class GiftBox extends LiraElement {
 
     render () {
         return `
-        <div class="gift-box">
-            <gift-back box-color="${this['box-color']}"></gift-back>
+            <div class="gift-box">
+                <gift-back box-color="${this['box-color']}"></gift-back>
                 <glowing-ball></glowing-ball>
                 <gift-front box-color="${this['box-color']}"></gift-front>
                 <gift-front-ribbon ribbon-color="${this['ribbon-color']}"></gift-front-ribbon>
