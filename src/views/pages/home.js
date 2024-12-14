@@ -22,10 +22,15 @@ class Home extends LiraElement {
                 <h1>${giftData.title}</h1>
                 <h2 slot="subtitle">${giftData.subtitle}</h2>
             </title-header>
-
             <main>
-                <gift-box box-color="${giftData.boxColor}" ribbon-color="${giftData.ribbonColor}">
-                </gift-box>
+                <div class="content">
+                    <gift-box box-color="${giftData.boxColor}" ribbon-color="${giftData.ribbonColor}">
+                    </gift-box>
+
+                    <continue-hint id="continue-to-open">
+                        Clique ou toque para continuar
+                    </continue-hint>
+                </div>
             </main>
         `
     }
