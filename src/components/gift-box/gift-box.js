@@ -28,12 +28,24 @@ export class GiftBox extends LiraElement {
 
     attributeChangedCallback (attrName, oldValue, newValue) {
         if (attrName === 'open' && oldValue !== newValue && newValue === 'true') {
-            const giftBox = this.shadowRoot.querySelector('.gift-box')
-            giftBox.classList.toggle('open')
-
-            const card = this.querySelector('gift-card')
-            card.setAttribute('showing', true)
+            this.startOpening()
         }
+    }
+
+    startOpening() {
+        const giftBox = this.shadowRoot.querySelector('.gift-box')
+        giftBox.classList.add('open')
+
+        const card = this.querySelector('gift-card')
+        card.setAttribute('showing', true)
+        card.hideGiftBox = this.hideBox.bind(this)
+    }
+
+    hideBox () {
+        const giftBox = this.shadowRoot.querySelector('.gift-box')
+        giftBox.classList.add('hidden')
+
+        this.hideContinueHint(true)
     }
 
     render () {

@@ -26,6 +26,16 @@
     }
 }
 
+@keyframes gift-box-hide {
+    0% {
+        margin-top: 0;
+        opacity: 1;
+    }
+    100% {
+        margin-top: 60px;
+        opacity: 0;
+    }
+}
 
 * {
     box-sizing: border-box;
@@ -68,4 +78,9 @@
 
 .gift-box.open > gift-cover, .gift-box.open > gift-cover-ribbon {
     animation: gift-open 1s forwards;
+}
+
+.gift-box.hidden > gift-back, .gift-box.hidden > gift-front, .gift-box.hidden > gift-front-ribbon {
+    animation: gift-box-hide 1s forwards;
+    animation-delay: 0.2s;
 }

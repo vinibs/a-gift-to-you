@@ -15,23 +15,28 @@ class Home extends LiraElement {
         this.innerHTML = this.render()
 
         const giftElement = this.querySelector('#gift')
-        giftElement.addEventListener('click', this.openGift)
+        giftElement.addEventListener('click', this.openGift.bind(this))
     }
 
     openGift (e) {
         e.preventDefault()
-        const giftElement = this
+        const giftElement = this.querySelector('#gift')
         const isGiftOpen = giftElement.getAttribute('open') === 'true'
 
         if (!isGiftOpen) {
+            const continueHint = this.hideContinueHint()
             const hiddenTime = 4 * 1000;
-            const continueHint = document.querySelector('#continue-to-open')
-            continueHint.setAttribute('transparent', true)
             setTimeout(() => continueHint.removeAttribute('transparent'), hiddenTime)
 
-
             giftElement.setAttribute('open', true)
+            giftElement.hideContinueHint = this.hideContinueHint.bind(this)
         }
+    }
+
+    hideContinueHint () {
+        const continueHint = document.querySelector('#continue-to-open')
+        continueHint.setAttribute('transparent', true)
+        return continueHint
     }
 
     // Defines the component default inner HTML

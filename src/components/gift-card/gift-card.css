@@ -102,7 +102,7 @@
 
 .card.showing {
     animation: gift-card-show 2s forwards;
-    animation-delay: 0.5s;
+    animation-delay: 1s;
     z-index: 1;
 }
 

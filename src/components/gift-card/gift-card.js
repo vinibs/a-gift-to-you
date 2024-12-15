@@ -18,16 +18,23 @@ export class GiftCard extends LiraElement {
     attributeChangedCallback (attrName, oldValue, newValue) {
         if (attrName === 'showing' && oldValue !== newValue) {
             if (newValue === 'true') {
-                const card = this.shadowRoot.querySelector('.card')
-                card.classList.add('showing')
-
-                const timeToWait = 4 * 1000;
-                setTimeout(() => {
-                    card.classList.add('pointer')
-                    document.addEventListener('click', this.hideCard.bind(this))
-                }, timeToWait)
+                this.showCard()
             }
         }
+    }
+
+    showCard () {
+        const card = this.shadowRoot.querySelector('.card')
+        card.classList.add('showing')
+        this.prepareToContinue(card)
+    }
+
+    prepareToContinue (card) {
+        const timeToWait = 4 * 1000;
+        setTimeout(() => {
+            card.classList.add('pointer')
+            document.addEventListener('click', this.hideCard.bind(this))
+        }, timeToWait)
     }
 
     hideCard (e) {
@@ -38,6 +45,8 @@ export class GiftCard extends LiraElement {
         const card = this.shadowRoot.querySelector('.card')
         card.classList.remove('showing')
         card.classList.add('shown')
+
+        this.hideGiftBox()
     }
 
     render () {
