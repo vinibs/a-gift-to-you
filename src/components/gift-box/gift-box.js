@@ -47,12 +47,17 @@ export class GiftBox extends LiraElement {
 
         this.hideContinueHint(true)
         this.showGiftContent()
+        this.fadeGlowingBall()
     }
 
     showGiftContent () {
         const giftContent = this.querySelector('gift-content')
         giftContent.setAttribute('showing', true)
+    }
 
+    fadeGlowingBall () {
+        const glowingBall = this.shadowRoot.querySelector('glowing-ball')
+        glowingBall.classList.add('fade')
     }
 
     render () {

@@ -105,8 +105,8 @@
 
 .gift-card.showing {
     /* animation: text-card-show 2s forwards; */
-    animation: show-card 2s forwards;
-    animation-delay: 1s;
+    animation: show-card 2.5s forwards;
+    animation-delay: 2.8s;
     z-index: 1;
 }
 

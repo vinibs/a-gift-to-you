@@ -37,6 +37,15 @@
     }
 }
 
+@keyframes glowing-ball-fade {
+    100% {
+        width: 100%;
+        padding-bottom: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -83,4 +92,19 @@
 .gift-box.hidden > gift-back, .gift-box.hidden > gift-front, .gift-box.hidden > gift-front-ribbon {
     animation: gift-box-hide 1s forwards;
     animation-delay: 0.2s;
+}
+
+.gift-box > glowing-ball.fade::after {
+    animation: glowing-ball-fade 5s forwards;
+    animation-delay: 1.5s;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px 15px rgba(255, 255, 255, 0.8);
+    display: block;
+    content: "";
+    width: 30%;
+    padding-bottom: 30%;
+    position: absolute;
+    top: 35%;
+    left: 35%;
 }
