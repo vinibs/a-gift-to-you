@@ -52,7 +52,7 @@ class Home extends LiraElement {
                             id="gift"
                             box-color="${giftData.boxColor}"
                             ribbon-color="${giftData.ribbonColor}">
-                        <gift-card slot="card">${giftData.cardText}</gift-card>
+                        <text-card slot="card">${giftData.cardText}</text-card>
                     </gift-box>
 
                     <continue-hint id="continue-to-open">

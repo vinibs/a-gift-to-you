@@ -62,7 +62,7 @@
 }
 
 
-@keyframes gift-card-show {
+@keyframes text-card-show {
     0% {
         border-radius: 3px;
         color: transparent;
@@ -111,7 +111,7 @@
     }
 }
 
-@keyframes gift-card-hide {
+@keyframes text-card-hide {
     0% {
         border-radius: 15px;
         box-shadow: 0 0px 40px rgba(0,0,0,0.3);

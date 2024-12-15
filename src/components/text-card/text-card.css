@@ -1,4 +1,4 @@
-@keyframes gift-card-show {
+@keyframes text-card-show {
     0% {
         border-radius: 3px;
         color: transparent;
@@ -46,7 +46,7 @@
     }
 }
 
-@keyframes gift-card-hide {
+@keyframes text-card-hide {
     0% {
         border-radius: 5px;
         box-shadow: 0 3px 5px rgba(0,0,0,0.1);
@@ -101,22 +101,13 @@
 }
 
 .card.showing {
-    animation: gift-card-show 2s forwards;
+    animation: text-card-show 2s forwards;
     animation-delay: 1s;
     z-index: 1;
 }
 
 .card.shown {
-    animation: gift-card-hide 1s forwards;
-}
-
-.card .card-content {
-    left: 50%;
-    line-height: 1.4em;
-    position: absolute;
-    top: calc(50%);
-    transform: translate(-50%, -50%);
-    width: calc(90% - 30px);
+    animation: text-card-hide 1s forwards;
 }
 
 @media (max-width: 800px) {

@@ -1,18 +1,18 @@
 import { LiraElement } from '/js/lira.js'
 
-const GiftCardAttributes = [
+const TextCardAttributes = [
     'showing',
     'shown',
 ]
 
-export class GiftCard extends LiraElement {
+export class TextCard extends LiraElement {
     constructor () {
-        super(true, GiftCardAttributes)
-        this.useStyle('./gift-card.css')
+        super(true, TextCardAttributes)
+        this.useStyle('./text-card.css')
     }
 
     static get observedAttributes () {
-        return GiftCardAttributes
+        return TextCardAttributes
     }
 
     attributeChangedCallback (attrName, oldValue, newValue) {
@@ -58,4 +58,4 @@ export class GiftCard extends LiraElement {
     }
 }
 
-window.customElements.define('gift-card', GiftCard)
+window.customElements.define('text-card', TextCard)

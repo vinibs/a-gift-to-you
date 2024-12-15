@@ -5,7 +5,7 @@ import './gift-parts/gift-front-ribbon.js'
 import './gift-parts/gift-cover.js'
 import './gift-parts/gift-cover-ribbon.js'
 import '../glowing-ball/glowing-ball.js'
-import '../gift-card/gift-card.js'
+import '../text-card/text-card.js'
 
 const GiftBoxAttributes = [
     'box-color',
@@ -36,7 +36,7 @@ export class GiftBox extends LiraElement {
         const giftBox = this.shadowRoot.querySelector('.gift-box')
         giftBox.classList.add('open')
 
-        const card = this.querySelector('gift-card')
+        const card = this.querySelector('text-card')
         card.setAttribute('showing', true)
         card.hideGiftBox = this.hideBox.bind(this)
     }
