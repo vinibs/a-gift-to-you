@@ -14,7 +14,7 @@ class Home extends LiraElement {
         // Sets the element's inner HTML to its own render() method's
         this.innerHTML = this.render()
 
-        const giftElement = document.getElementById('gift')
+        const giftElement = this.querySelector('#gift')
         giftElement.addEventListener('click', this.openGift)
     }
 
@@ -24,6 +24,12 @@ class Home extends LiraElement {
         const isGiftOpen = giftElement.getAttribute('open') === 'true'
 
         if (!isGiftOpen) {
+            const hiddenTime = 4 * 1000;
+            const continueHint = document.querySelector('#continue-to-open')
+            continueHint.setAttribute('transparent', true)
+            setTimeout(() => continueHint.removeAttribute('transparent'), hiddenTime)
+
+
             giftElement.setAttribute('open', true)
         }
     }
@@ -38,9 +44,10 @@ class Home extends LiraElement {
             <main>
                 <div class="content">
                     <gift-box
-                        id="gift"
-                        box-color="${giftData.boxColor}"
-                        ribbon-color="${giftData.ribbonColor}">
+                            id="gift"
+                            box-color="${giftData.boxColor}"
+                            ribbon-color="${giftData.ribbonColor}">
+                        <gift-card slot="card">${giftData.cardText}</gift-card>
                     </gift-box>
 
                     <continue-hint id="continue-to-open">

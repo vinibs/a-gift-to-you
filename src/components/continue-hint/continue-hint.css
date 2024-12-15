@@ -25,5 +25,11 @@
     opacity: 0;
     text-align: center;
     text-transform: uppercase;
+    transition: linear 0.3s;
     z-index: 1;
+}
+
+.transparent {
+    color: transparent;
+    transition: linear 0.3s;
 }

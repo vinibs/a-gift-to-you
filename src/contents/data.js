@@ -4,4 +4,5 @@ export const giftData = {
     subtitle: 'A simple gift box with a ribbon',
     boxColor: '#dcdcdc',
     ribbonColor: '#234b92',
+    cardText: "You've got a gift!",
 }

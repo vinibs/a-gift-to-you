@@ -5,6 +5,7 @@ import './gift-parts/gift-front-ribbon.js'
 import './gift-parts/gift-cover.js'
 import './gift-parts/gift-cover-ribbon.js'
 import '../glowing-ball/glowing-ball.js'
+import '../gift-card/gift-card.js'
 
 const GiftBoxAttributes = [
     'box-color',
@@ -25,11 +26,23 @@ export class GiftBox extends LiraElement {
         return GiftBoxAttributes
     }
 
+    attributeChangedCallback (attrName, oldValue, newValue) {
+        if (attrName === 'open' && oldValue !== newValue && newValue === 'true') {
+            const giftBox = this.shadowRoot.querySelector('.gift-box')
+            giftBox.classList.toggle('open')
+
+            const card = this.querySelector('gift-card')
+            card.setAttribute('showing', true)
+        }
+    }
+
     render () {
         return `
-            <div class="gift-box${this.open ? ' open' : ''}">
+            <div class="gift-box">
                 <gift-back box-color="${this['box-color']}"></gift-back>
                 <glowing-ball></glowing-ball>
+                <slot name="card" id="card"></slot>
+                <slot name="gift-content"></slot>
                 <gift-front box-color="${this['box-color']}"></gift-front>
                 <gift-front-ribbon ribbon-color="${this['ribbon-color']}"></gift-front-ribbon>
                 <gift-cover box-color="${this['box-color']}"></gift-cover>

@@ -43,6 +43,7 @@
     max-width: 450px;
     max-height: 450px;
     z-index: 2;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .gift-box::after {
