@@ -81,6 +81,7 @@
     top: 0;
     max-width: 220px;
     backdrop-filter: blur(5px);
+    text-align: left;
 }
 
 .gift-card > .card-body, .gift-card > .card-body > .code-info, .gift-card > .card-footer {
