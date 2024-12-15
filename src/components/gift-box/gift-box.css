@@ -5,11 +5,27 @@
         opacity: 0;
     }
     100% {
+        cursor: pointer;
         display: block;
         top: 0;
         opacity: 1;
     }
 }
+
+@keyframes gift-open {
+    0% {
+        opacity: 1;
+        margin: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        margin-top: -130px;
+    }
+}
+
 
 * {
     box-sizing: border-box;
@@ -40,4 +56,15 @@
     width: 100%;
     top: 0;
     left: 0;
+}
+
+.gift-box.open {
+    cursor: default;
+    opacity: 1;
+    animation: none;
+    animation-delay: none;
+}
+
+.gift-box.open > gift-cover, .gift-box.open > gift-cover-ribbon {
+    animation: gift-open 1s forwards;
 }

@@ -9,6 +9,7 @@ import '../glowing-ball/glowing-ball.js'
 const GiftBoxAttributes = [
     'box-color',
     'ribbon-color',
+    'open',
 ]
 
 export class GiftBox extends LiraElement {
@@ -26,7 +27,7 @@ export class GiftBox extends LiraElement {
 
     render () {
         return `
-            <div class="gift-box">
+            <div class="gift-box${this.open ? ' open' : ''}">
                 <gift-back box-color="${this['box-color']}"></gift-back>
                 <glowing-ball></glowing-ball>
                 <gift-front box-color="${this['box-color']}"></gift-front>

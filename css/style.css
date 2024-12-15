@@ -52,21 +52,6 @@ title-header, gift-box {
     width: 100%;
 }
 
-a,
-a:visited {
-    color: rgb(5, 110, 190);
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-a:active,
-a:hover {
-    text-decoration: underline;
-}
-
-h2 {
-    font-weight: lighter;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    text-transform: uppercase;
+.pointer {
+    cursor: pointer;
 }

@@ -13,6 +13,19 @@ class Home extends LiraElement {
     connectedCallback () {
         // Sets the element's inner HTML to its own render() method's
         this.innerHTML = this.render()
+
+        const giftElement = document.getElementById('gift')
+        giftElement.addEventListener('click', this.openGift)
+    }
+
+    openGift (e) {
+        e.preventDefault()
+        const giftElement = this
+        const isGiftOpen = giftElement.getAttribute('open') === 'true'
+
+        if (!isGiftOpen) {
+            giftElement.setAttribute('open', true)
+        }
     }
 
     // Defines the component default inner HTML
@@ -24,7 +37,10 @@ class Home extends LiraElement {
             </title-header>
             <main>
                 <div class="content">
-                    <gift-box box-color="${giftData.boxColor}" ribbon-color="${giftData.ribbonColor}">
+                    <gift-box
+                        id="gift"
+                        box-color="${giftData.boxColor}"
+                        ribbon-color="${giftData.ribbonColor}">
                     </gift-box>
 
                     <continue-hint id="continue-to-open">
