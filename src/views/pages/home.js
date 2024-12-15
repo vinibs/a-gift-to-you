@@ -39,6 +39,24 @@ class Home extends LiraElement {
         return continueHint
     }
 
+    getGiftContentHtml () {
+        if (!giftData || !giftData.content) {
+            return ''
+        }
+
+        let giftContentHtml = `<gift-content slot="gift-content" type="${giftData.content.type}"`
+        for (const key in giftData.content) {
+            if (key === 'type') {
+                continue
+            }
+
+            giftContentHtml += ` ${key}="${giftData.content[key]}"`
+        }
+        giftContentHtml += `></gift-content>`
+
+        return giftContentHtml
+    }
+
     // Defines the component default inner HTML
     render () {
         return `
@@ -53,6 +71,7 @@ class Home extends LiraElement {
                             box-color="${giftData.boxColor}"
                             ribbon-color="${giftData.ribbonColor}">
                         <text-card slot="card">${giftData.cardText}</text-card>
+                        ${this.getGiftContentHtml()}
                     </gift-box>
 
                     <continue-hint id="continue-to-open">

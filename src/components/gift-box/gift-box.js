@@ -46,6 +46,13 @@ export class GiftBox extends LiraElement {
         giftBox.classList.add('hidden')
 
         this.hideContinueHint(true)
+        this.showGiftContent()
+    }
+
+    showGiftContent () {
+        const giftContent = this.querySelector('gift-content')
+        giftContent.setAttribute('showing', true)
+
     }
 
     render () {
