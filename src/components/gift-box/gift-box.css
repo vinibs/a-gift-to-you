@@ -1,12 +1,10 @@
 @keyframes gift-show {
     0% {
-        display: block;
         top: 30px;
         opacity: 0;
     }
     100% {
         cursor: pointer;
-        display: block;
         top: 0;
         opacity: 1;
     }
@@ -55,12 +53,14 @@
 .gift-box {
     animation: gift-show 1s forwards;
     animation-delay: 2s;
+    display: block;
     margin: 0 auto;
     opacity: 0;
     position: relative;
     width: 90%;
     max-width: 450px;
     max-height: 450px;
+    top: 0;
     z-index: 2;
     -webkit-tap-highlight-color: transparent;
 }

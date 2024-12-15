@@ -9,6 +9,20 @@
     }
 }
 
+@keyframes subtitle-show {
+    0% {
+        margin-top: -8rem;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -29,18 +43,19 @@
 
 .title, .subtitle {
     display: block;
-    animation: title-show 1s forwards;
     opacity: 0;
 }
 
 .title {
+    animation: title-show 1s forwards;
     animation-delay: .5s;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
 }
 
 .subtitle {
-    animation-delay: 1.5s;
+    animation: subtitle-show 1s forwards;
+    animation-delay: 1s;
     color: rgb(109,109,109);
     font-size: 1.5rem;
 }

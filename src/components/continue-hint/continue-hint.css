@@ -1,11 +1,11 @@
 @keyframes subtitle-show {
     0% {
         opacity: 0;
-        margin-top: 10px;
+        padding-top: 32px;
     }
     100% {
         opacity: 1;
-        margin-top: 0;
+        padding-top: 1rem;
     }
 }
 
@@ -27,6 +27,7 @@
     text-transform: uppercase;
     transition: linear 0.3s;
     z-index: 1;
+    height: calc(32px + 1rem);
 }
 
 .transparent {
