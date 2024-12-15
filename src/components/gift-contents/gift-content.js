@@ -6,11 +6,14 @@ const GiftContentAttributes = [
 
     // Attributes for GiftCard
     'code',
+    'amount',
     'brand',
     'redeem-url',
     'redeem-instructions',
     'card-background-color',
     'card-text-color',
+    'card-button-color',
+    'card-button-text-color',
 ]
 
 export class GiftContent extends LiraElement {
